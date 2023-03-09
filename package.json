@@ -5,15 +5,13 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "cli-project": "./index.js"
+    "your-command-name": "./bin.js"
   },
 "pkg": {
    "scripts": "build/**/*.js"
  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg . --output myapp",
-    "package": "pkg . --targets node14-win-x64 --output hello"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
