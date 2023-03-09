@@ -1,0 +1,14 @@
+{
+    "name": "my-cli-app",
+    "version": "1.0.0",
+    "scripts": [
+      "index.js"
+    ],
+    "targets": [
+      {
+        "platform": "win",
+        "arch": "x64",
+        "output": "my-cli-app.exe"
+      }
+    ]
+  }

@@ -1,0 +1,57 @@
+//  Button Module -------------------------------------------------------------
+//
+// Sets some default styles for elements that are usually used for buttons,
+// such as <button> and <a> elements
+
+%button {
+	display: inline-block;
+	padding: .5em 1em;
+	border: none;
+	border-radius: .3em;
+	background: tint($body-color, 90);
+	line-height: 1;
+	font-family: $font-stack;
+	text-decoration: none;
+	@extend %is-antialiased;
+	@extend %is-centered;
+
+	&:hover {
+		background: tint($body-color, 95);
+	}
+
+	&:active {
+		background: tint($body-color, 80);
+	}
+	
+	&:disabled {
+		opacity: 0.5;
+		background: tint($body-color, 90);
+	}
+
+	/* &:focus {
+		outline: none;
+	} */
+}
+
+// Modifiers ------------------------------------------------------------------
+//
+
+button,
+input[type=submit] {
+	@extend %button;
+}
+/*
+%button--grey {
+	@extend %button;
+	@include rem(padding, 15);
+	background-color: shade($white, 30);
+	color: shade($white, 70);
+	
+	&:hover {
+		background-color: shade($white, 20);
+	}
+	&:active {
+		background-color: shade($white, 40);
+	}
+}
+*/

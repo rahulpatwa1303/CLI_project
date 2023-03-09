@@ -1,0 +1,37 @@
+// Accent colors --------------------------------------------------------------
+
+$solitude: #ecf7ff;
+$picton-blue: #59b2f0;
+$endeavour: #0068b0;
+$prussian-blue: #002b48;
+
+// Greys ----------------------------------------------------------------------
+
+$white: #FFF;
+$black: #000;
+
+// Named references -----------------------------------------------------------
+
+$body-color: $prussian-blue;
+
+// Reporting ------------------------------------------------------------------
+//
+// Using in the Reporting module (module/_reporting.scss)
+
+$reporting-text: #333333;
+$reporting-success: #A2D69A;
+$reporting-error: #F39B88;
+$reporting-warning: #F7E287;
+$reporting-info: #90B1D2;
+
+// Font-stack -----------------------------------------------------------------
+//
+// Helvetica Neue is nice to have
+// Helvetica is the aimed-for default
+// Verdana is available on iOS, WP and BlackBerry
+// Roboto should be available on Android
+// Fall back to any sans-serif
+//
+// http://www.jordanm.co.uk/tinytype
+
+$font-stack: "Source Sans Pro", "Helvetica Neue", Helvetica, Verdana, Roboto, sans-serif;
