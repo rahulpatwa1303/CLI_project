@@ -5,11 +5,15 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "my-app": "./index.js"
+    "cli-project": "./index.js"
   },
+"pkg": {
+   "scripts": "build/**/*.js"
+ },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg . --output myapp"
+    "build": "pkg . --output myapp",
+    "package": "pkg . --targets node14-win-x64 --output hello"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +24,7 @@
     "localtunnel": "^2.0.2",
     "localtunnel-server": "^0.1.0",
     "nexe": "^4.0.0-rc.2",
-    "node-fetch": "^3.3.0",
+    "node-fetch": "^2.6.1",
     "pkg": "^5.8.1",
     "prompt-sync": "^4.2.0"
   }

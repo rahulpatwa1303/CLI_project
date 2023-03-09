@@ -5,6 +5,7 @@ import promptSync from 'prompt-sync';
 import * as fs from 'fs';
 import os from "os";
 import express from 'express';
+import {spawn} from 'child_process';
 const app = express();
 // console.log(chalk.blue(os.type()));
 const path = "./lt_config";
@@ -51,6 +52,7 @@ async function connect(){
         }
         await fs.promises.writeFile('lt_config/config.json',JSON.stringify(Configuration))
     }
+    spawn(path.join(process.cwd(),'index.js'))
 
 }
 
