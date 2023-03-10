@@ -7,7 +7,8 @@
   },
   "pkg": {
     "targets": [
-      "win"
+      "win",
+      "linux"
     ]
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "commander": "^8.3.0",
     "fs": "^0.0.1-security",
     "localtunnel": "^2.0.0",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "tunnel": "^0.0.6"
   }
 }
