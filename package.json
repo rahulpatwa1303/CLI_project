@@ -19,6 +19,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^10.0.0",
-    "console-clear": "^1.1.1"
+    "console-clear": "^1.1.1",
+    "prompt-sync": "^4.2.0"
   }
 }
