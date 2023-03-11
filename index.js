@@ -2,27 +2,42 @@ const localtunnel = require('localtunnel');
 const chalk = require('chalk');
 const promptSync = require('prompt-sync')();
 const fs = require('fs');
+const clear = require('console-clear')
 
 async function connect(){
   
   var port;
   var subdomain;
-  const path = "./lt_config";
+  const dir = "./lt_config";
   var c = {}
 
+
+  const name = "moles"
+  const version = "v1.1"
+  clear()
+  const {columns} = process.stdout;
+
+  const topLeft = chalk.yellow(`${name}`)
+  const topRight = chalk.yellow(`${version}`)
+
+  const padding = ' '.repeat(columns - topLeft.length - topRight.length)
+  console.log(`${topLeft} ${padding} ${topRight}`)
   
   const funccall = async(port,subdomain) => {  
     console.log('port,subdomain')
     console.log(port,subdomain)
     try {
-      const tunnel = await localtunnel({ port, subdomain });
+      const tunnel = await localtunnel({ port, subdomain,printRequests:true });
       console.log(`Tunnel created at: ${tunnel.url}`);
+      tunnel.on('request',function(req){
+        console.log(req.method,req.path)
+      })
     } catch (error) {
       console.error('Error creating tunnel:', error);
     }
   }
 
-  if (fs.existsSync(path)) {
+  if (fs.existsSync(dir)) {
     fs.readFile('./lt_config/config.json', 'utf8', (err, data) => {
       let jsonData = JSON.parse(data);
       port = jsonData.port

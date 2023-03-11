@@ -14,10 +14,11 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
+    "console-clear": "^1.1.1",
+    "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "localtunnel": "^2.0.0",
     "prompt-sync": "^4.2.0",
     "tunnel": "^0.0.6"
-
   }
 }
